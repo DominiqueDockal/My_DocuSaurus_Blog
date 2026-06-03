@@ -14,11 +14,11 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
 
-  url: process.env.DEPLOYMENT_URL ?? "https://dominiquedockal.github.io",
-  baseUrl: process.env.BASE_URL ?? "/My_DocuSaurus_Blog/",
-  organizationName: process.env.GITHUB_ORG, 
-  projectName: process.env.GITHUB_PROJECT, 
-  deploymentBranch: process.env.DEPLOYMENT_BRANCH,
+  url: process.env.DEPLOYMENT_URL ?? 'https://dominiquedockal.github.io',
+  baseUrl: process.env.BASE_URL ?? '/My_DocuSaurus_Blog/',
+  organizationName: process.env.GITHUB_ORG ?? 'DominiqueDockal',
+  projectName: process.env.GITHUB_PROJECT ?? 'My_DocuSaurus_Blog',
+  deploymentBranch: process.env.DEPLOYMENT_BRANCH ?? 'main',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
