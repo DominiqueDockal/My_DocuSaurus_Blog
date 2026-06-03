@@ -7,7 +7,7 @@ dotenvconfig();
 
 /* TODO: change to read configuration from environment */
 const blogEnabled = Boolean(process.env.BLOG_ENABLED === 'true')
-const gitRepositoryUrl = process.env.GITREPOSITORYURL ?? 'https://github.com/DominiqueDockal/My_DocuSaurus_Blog'
+const gitRepositoryUrl = process.env.GIT_REPOSITORY_URL ?? 'https://github.com/DominiqueDockal/My_DocuSaurus_Blog'
 
 const config: Config = {
   title: 'Dominique Dockal Learning Journal',
@@ -150,10 +150,13 @@ const config: Config = {
 
 
 if (blogEnabled) {
-  (config.themeConfig.navbar as any).items.push({to: '/blog', label: 'Blog', position: 'left'});
-  (
-    config.themeConfig.footer as any
-  ).links[2].items.push({
+  (config.themeConfig.navbar as any).items.push({
+    to: '/blog',
+    label: 'Blog',
+    position: 'left',
+  });
+
+  (config.themeConfig.footer as any).links[0].items.push({
     to: '/blog',
     label: 'Blog',
   });
