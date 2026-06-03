@@ -56,6 +56,7 @@ The repository is organized as follows:
 
 - `blog/`: Contains markdown files for blog posts. Blog-related metadata is automatically picked up by the Docusaurus configuration.
 - `docs/`: Contains markdown files for documentation. These files are referenced in `sidebars.ts` to define the sidebar structure.
+   - `docs/projects/docusaurus-blog.md`: Documents how the Docusaurus starter template was configured and which steps were performed.
 - `src/`: Contains custom React components, CSS, and JavaScript for additional functionality or theming.
 - `static/`: Stores static assets (e.g., images, icons) served directly without processing.
 - `sidebars.ts`: Configures the structure of sidebars in the documentation section.
