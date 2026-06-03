@@ -15,7 +15,7 @@ const config: Config = {
 
 
   url: process.env.DEPLOYMENT_URL ?? "https://dominiquedockal.github.io",
-  baseUrl: process.env.BASE_URL ?? "/",
+  baseUrl: process.env.BASE_URL ?? "/My_DocuSaurus_Blog/",
   organizationName: process.env.GITHUB_ORG, 
   projectName: process.env.GITHUB_PROJECT, 
   deploymentBranch: process.env.DEPLOYMENT_BRANCH,
