@@ -63,15 +63,43 @@ After running `npm run start`, the site will be available in your browser (usual
 
 ### Configuration and customization
 
-This project is based on the Developer Akademie Docusaurus starter template and was customized to act as a personal developer blog and learning journal:
+This project is based on the Developer Akademie Docusaurus starter template and was customized to create a personal DevSecOps learning journal and portfolio.
 
-- The site **title** and **tagline** were updated to reflect the personal learning journal.
-- Deployment-related settings (`url`, `baseUrl`, `organizationName`, `projectName`, `deploymentBranch`) were configured for GitHub Pages.
-- The **repository URL** and `editUrl` values were set so docs and blog posts link back to the correct GitHub repository.
-- The **navbar** and **footer** were customized to include:
-  - a Docs link
-  - a Blog link (optional, controlled via configuration)
-  - links to the personal repository and the original template repository
+#### Site identity
+
+- Replaced the default site title `DSO Live Demo Docs` with `Dominique Dockal Learning Journal`.
+- Replaced the default tagline `Dinosaurs are cool` with a project-specific description for my DevSecOps learning journal, notes, and project documentation.
+- Updated the navbar title from the generic `My Site` label to my own name, `Dominique Dockal`.
+- Adjusted the navbar logo metadata by replacing the default alt text with `Dominique Dockal Logo`.
+
+#### Environment variables and deployment configuration
+
+- Kept the existing environment-based configuration approach from the template and extended it with project-specific default values.
+- Added a `GIT_REPOSITORY_URL` entry to `example.env` to document the expected repository variable.
+- Introduced a dedicated `gitRepositoryUrl` constant in `docusaurus.config.ts` that reads `process.env.GIT_REPOSITORY_URL` and falls back to my repository URL.
+- Configured `url`, `baseUrl`, `organizationName`, `projectName`, and `deploymentBranch` with environment-variable lookups and fallback defaults so the site can build locally and in CI/CD environments such as GitHub Actions even if no `.env` file is loaded automatically.
+- Updated the GitHub Pages configuration to match my own repository setup by using `https://dominiquedockal.github.io` as the default deployment URL and `/My_DocuSaurus_Blog/` as the default base path.
+
+#### Repository references and edit links
+
+- Replaced the original hardcoded template repository links with references to my own GitHub repository.
+- Updated the docs `editUrl` to use the centralized `gitRepositoryUrl` value.
+- Updated the blog `editUrl` to use the same repository reference so edit links stay consistent across docs and blog pages.
+- Replaced the navbar GitHub link so it points to my own repository instead of the original template repository.
+
+#### Footer customization
+
+- Extended the **Docs** footer column by adding a project-related navigation entry (`/docs/projects/overview`) in addition to the existing tutorial link.
+- Removed the default **Community** footer column from the starter template.
+- Reworked the **More** footer column so it now links to my own repository and also includes a `Template` link to the original Developer Akademie starter repository.
+- Replaced the original copyright message with a personalized version that references me as the author and adds the note `Extended from the developer-akademie-starter`.
+
+#### Optional blog integration
+
+- Kept the existing `BLOG_ENABLED` environment-based switch from the starter template to control whether the blog feature is enabled.
+- Reused the conditional blog configuration so the blog plugin is only active when `BLOG_ENABLED` is set to `true`.
+- Adjusted the conditional navigation behavior so the Blog link is added to the navbar when blog support is enabled.
+- Moved the conditional footer Blog link into the **Docs** footer section to better match the structure of my customized footer..
 
 ### Deployment
 
