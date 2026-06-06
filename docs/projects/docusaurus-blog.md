@@ -99,7 +99,7 @@ This project is based on the Developer Akademie Docusaurus starter template and 
 - Kept the existing `BLOG_ENABLED` environment-based switch from the starter template to control whether the blog feature is enabled.
 - Reused the conditional blog configuration so the blog plugin is only active when `BLOG_ENABLED` is set to `true`.
 - Adjusted the conditional navigation behavior so the Blog link is added to the navbar when blog support is enabled.
-- Moved the conditional footer Blog link into the **Docs** footer section to better match the structure of my customized footer..
+- Moved the conditional footer Blog link into the **Docs** footer section to better match the structure of my customized footer.
 
 ### Deployment
 
