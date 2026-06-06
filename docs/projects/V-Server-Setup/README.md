@@ -47,7 +47,7 @@ Replace the example values with your actual server details in the final document
 1. Open an SSH connection to the server using the assigned username and password:
 
    ```bash
-   ssh example-user@123.45.67.89
+   ssh <example-user>@<123.45.67.89>
    ```
 
 2. Confirm the server fingerprint when prompted so that the host key is stored in the local `known_hosts` file.
